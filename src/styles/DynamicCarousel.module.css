@@ -1,0 +1,63 @@
+.carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.carouselContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.staticCarousel {
+    width: 200px;
+}
+
+.imageContainer {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    animation: scrollAnimation 60s linear infinite;
+    direction: rtl;
+}
+
+.image {
+    width: 100px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.imageContainerStatic {
+    display: flex;
+}
+
+.transition-enter {
+    transform: translateX(-100%);
+}
+
+.transition-enter-active {
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+}
+
+.transition-exit {
+    transform: translateX(0);
+}
+
+.transition-exit-active {
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+}
+
+@keyframes scrollAnimation {
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
